@@ -1,4 +1,8 @@
 export default function cleanSet(set, startString) {
+  if (!startString || startString.length < 1) {
+    return '';
+  }
+
   const newStringSet = new Set();
 
   if (startString !== '') {
