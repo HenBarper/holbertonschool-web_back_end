@@ -16,10 +16,12 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
     },
     {
       status: photoPromise.status,
-      value: photoPromise.status === 'fulfilled' ? photoPromise.value : photoPromise.reason,
+      value:
+        photoPromise.status === 'fulfilled'
+          ? photoPromise.value
+          : photoPromise.reason.message, // Extract the error message
     },
   ];
 
   return results;
 }
-
