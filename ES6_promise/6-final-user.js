@@ -10,7 +10,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       if (result.status === 'rejected') {
         return {
           status: 'rejected',
-          value: `${result.reason.message}`,
+          value: `Error: ${result.reason.message}`,
         };
       }
       return {
