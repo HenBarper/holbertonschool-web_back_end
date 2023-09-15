@@ -6,7 +6,7 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   await Promise.allSettled([
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
-  ]).then(async (results) => {
+  ]).then(async (result) => {
     theStatus.push({
       status: result.status,
       value: result.value,
